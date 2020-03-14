@@ -16,9 +16,15 @@ from setuptools import setup
 
 # Do not edit these constants. They will be updated automatically
 # by scripts/update-client.sh.
+<<<<<<< HEAD
 CLIENT_VERSION = "11.0.0-snapshot"
 PACKAGE_NAME = "kubernetes"
 DEVELOPMENT_STATUS = "4 - Beta"
+=======
+CLIENT_VERSION = "1.0.2"
+PACKAGE_NAME = "kubernetes"
+DEVELOPMENT_STATUS = "5 - Production/Stable"
+>>>>>>> release-1.0
 
 # To install the library, run the following
 #
@@ -27,6 +33,7 @@ DEVELOPMENT_STATUS = "4 - Beta"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
+<<<<<<< HEAD
 EXTRAS = {
     'adal': ['adal>=1.0.2']
 }
@@ -44,6 +51,19 @@ with open('requirements.txt') as f:
 
 with open('test-requirements.txt') as f:
     TESTS_REQUIRES = f.readlines()
+=======
+REQUIRES = [
+    "certifi",
+    "ipaddress",
+    "oauth2client",
+    "setuptools",
+    "six",
+    "urllib3!=1.21",
+    "python-dateutil",
+    "pyyaml",
+    "websocket-client",
+]
+>>>>>>> release-1.0
 
 setup(
     name=PACKAGE_NAME,

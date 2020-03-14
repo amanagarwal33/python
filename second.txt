@@ -1,1 +1,5 @@
 this is second file
+<<<<<<< HEAD
+=======
+Yet another change in the file,
+>>>>>>> release-1.0

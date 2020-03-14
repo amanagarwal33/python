@@ -76,6 +76,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
+<<<<<<< HEAD
         self.user_agent = 'OpenAPI-Generator/11.0.0-snapshot/python'
 
     def __enter__(self):
@@ -91,6 +92,9 @@ class ApiClient(object):
             self._pool = None
             if hasattr(atexit, 'unregister'):
                 atexit.unregister(self.close)
+=======
+        self.user_agent = 'Swagger-Codegen/1.0.0-alpha/python'
+>>>>>>> release-1.0
 
     @property
     def pool(self):

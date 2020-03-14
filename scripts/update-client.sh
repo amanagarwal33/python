@@ -60,6 +60,7 @@ sed -i'' "s/^CLIENT_VERSION = .*/CLIENT_VERSION = \\\"${CLIENT_VERSION}\\\"/" "$
 sed -i'' "s/^__version__ = .*/__version__ = \\\"${CLIENT_VERSION}\\\"/" "${CLIENT_ROOT}/__init__.py"
 sed -i'' "s/^PACKAGE_NAME = .*/PACKAGE_NAME = \\\"${PACKAGE_NAME}\\\"/" "${SCRIPT_ROOT}/../setup.py"
 sed -i'' "s,^DEVELOPMENT_STATUS = .*,DEVELOPMENT_STATUS = \\\"${DEVELOPMENT_STATUS}\\\"," "${SCRIPT_ROOT}/../setup.py"
+<<<<<<< HEAD
 
 # This is a terrible hack:
 # first, this must be in gen repo not here
@@ -67,3 +68,10 @@ sed -i'' "s,^DEVELOPMENT_STATUS = .*,DEVELOPMENT_STATUS = \\\"${DEVELOPMENT_STAT
 echo ">>> patching client..."
 git apply "${SCRIPT_ROOT}/rest_client_patch.diff"
 echo ">>> Done."
+=======
+sed -i'' "/^configuration = Configuration()$/d" "${CLIENT_ROOT}/client/__init__.py"
+sed -i'' "/^from .configuration import Configuration$/d" "${CLIENT_ROOT}/client/__init__.py"
+sed -i '${/^$/d;}' "${CLIENT_ROOT}/client/__init__.py"
+echo "from .configuration import Configuration, ConfigurationObject, configuration" >> "${CLIENT_ROOT}/client/__init__.py"
+echo "---Done."
+>>>>>>> release-1.0

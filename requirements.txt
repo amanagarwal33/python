@@ -2,6 +2,10 @@ certifi>=14.05.14 # MPL
 six>=1.9.0  # MIT
 python-dateutil>=2.5.3  # BSD
 setuptools>=21.0.0  # PSF/ZPL
+<<<<<<< HEAD
+=======
+urllib3>=1.19.1,!=1.21  # MIT
+>>>>>>> release-1.0
 pyyaml>=3.12  # MIT
 google-auth>=1.0.1  # Apache-2.0
 ipaddress>=1.0.17;python_version=="2.7"  # PSF
